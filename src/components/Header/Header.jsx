@@ -3,7 +3,6 @@ import { RiMenu3Line } from "react-icons/ri";
 import { BsCart3 } from "react-icons/bs";
 import { IoClose } from "react-icons/io5";
 import { Link, useLocation, useNavigate } from "react-router-dom"; // Import useLocation and useNavigate
-import Button from "../UI/button";
 import SearchBar from "../UI/SearchBar";
 
 const Header = () => {
@@ -26,9 +25,9 @@ const Header = () => {
       <div className="flex justify-between items-center md:hidden">
         <div className="text-[5vw] font-bold">US-ECOMMERCE</div>
         <div className="text-[7vw] text-orange relative items-center cursor-pointer font-bold flex gap-5">
-          <Button text={"login"} onClick={()=>{
+          <button  className="bg-orange py-2 px-2 font-bold shadow-black shadow-lg text-white" onClick={()=>{
             navigate('/login');
-          }}/>
+          }}>Login</button>
           <BsCart3 className="text-[5vw]" />
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <IoClose /> : <RiMenu3Line />}
@@ -59,7 +58,9 @@ const Header = () => {
           <SearchBar />
         </div>
         <div className="flex items-center gap-5">
-          <Button text={"login"} onClick={()=>navigate('/login')}/>
+        <button  className="bg-orange py-2 px-2 font-bold shadow-black shadow-lg text-white" onClick={()=>{
+            navigate('/login');
+          }}>Login</button>
           <BsCart3 className="text-[4vw] text-orange" onClick={() => navigate('/cart')} />
         </div>
       </div>
