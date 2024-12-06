@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { FaShippingFast } from "react-icons/fa";
 import { MdEdit } from "react-icons/md"; // For edit icon
-import Button from "../UI/button"; // Assuming you have a button component
 
 const Cart = () => {
   const [quantity, setQuantity] = useState(1);
