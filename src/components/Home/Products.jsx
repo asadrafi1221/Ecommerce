@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { FaRegHeart } from "react-icons/fa6";
-import Button from '../UI/button';
 
 
 const ProductsData = [
@@ -42,7 +41,8 @@ function Products() {
             <p>{e.desc}</p>
             <p className='text-green-500'>Rs {e.price}</p>
             <div className='mt-5'>
-            <Button text={'Add To Cart'} className={'w-full '}/>
+            <button  className="bg-orange py-2 px-2 font-bold shadow-black shadow-lg text-white" >Add to cart</button>
+
             </div>
             <FaRegHeart className={`absolute top-5 right-5 text-3xl ${isLiked ? 'text-orange' : 'text-black'}`} onClick={(index)=>{
                 setLike(!isLiked)
@@ -65,7 +65,8 @@ function Products() {
             <p>{e.desc}</p>
             <p className='text-green-500'>Rs {e.price}</p>
             <div className='mt-5'>
-            <Button text={'Add To Cart'} className={'w-full '}/>
+            <button  className="bg-orange py-2 px-2 font-bold shadow-black shadow-lg text-white" >Add to cart</button>
+
             </div>
             <FaRegHeart className={`absolute top-5 right-5 text-3xl ${isLiked ? 'text-orange' : 'text-black'}`} onClick={(index)=>{
                 setLike(!isLiked)
@@ -88,7 +89,8 @@ function Products() {
             <p>{e.desc}</p>
             <p className='text-green-500'>Rs {e.price}</p>
             <div className='mt-5'>
-            <Button text={'Add To Cart'} className={'w-full '}/>
+            <button  className="bg-orange py-2 px-2 font-bold shadow-black shadow-lg text-white" >Add to cart</button>
+
             </div>
             <FaRegHeart className={`absolute top-5 right-5 text-3xl ${isLiked ? 'text-orange' : 'text-black'}`} onClick={(index)=>{
                 setLike(!isLiked)

@@ -5,7 +5,6 @@ import Mobile from '../3d/Mobile';
 import HoverDevCards from '../3d/HoverLinks';
 import Forms from '../UI/Forms';
 import { ScrollTrigger } from 'gsap/all';
-import Button from '../UI/button';
 import { DivOrigami } from '../3d/FlipingCards';
 
 
@@ -70,7 +69,7 @@ function Contact() {
   <div className='flex justify-end px-5 '>
   
   <div className="flex justify-end Fancy p-5">
-     <Button text={'Submit'}/>
+  <button  className="bg-orange py-2 px-2 font-bold shadow-black shadow-lg text-white" >Submit</button>
         </div>
     </div>
 </div>
