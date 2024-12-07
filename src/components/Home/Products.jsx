@@ -41,7 +41,7 @@ function Products() {
             <p>{e.desc}</p>
             <p className='text-green-500'>Rs {e.price}</p>
             <div className='mt-5'>
-            <button  className="bg-orange py-2 px-2 font-bold shadow-black shadow-lg text-white" >Add to cart</button>
+            <button  className="bg-orange py-3 px-2  uppercase w-full transition-all duration-500 ease-in-out hover:shadow-black shadow-lg text-white" >Add to cart</button>
 
             </div>
             <FaRegHeart className={`absolute top-5 right-5 text-3xl ${isLiked ? 'text-orange' : 'text-black'}`} onClick={(index)=>{
@@ -65,7 +65,7 @@ function Products() {
             <p>{e.desc}</p>
             <p className='text-green-500'>Rs {e.price}</p>
             <div className='mt-5'>
-            <button  className="bg-orange py-2 px-2 font-bold shadow-black shadow-lg text-white" >Add to cart</button>
+            <button  className="bg-orange py-3 px-2  uppercase w-full transition-all duration-500 ease-in-out hover:shadow-black shadow-lg text-white" >Add to cart</button>
 
             </div>
             <FaRegHeart className={`absolute top-5 right-5 text-3xl ${isLiked ? 'text-orange' : 'text-black'}`} onClick={(index)=>{
@@ -89,7 +89,7 @@ function Products() {
             <p>{e.desc}</p>
             <p className='text-green-500'>Rs {e.price}</p>
             <div className='mt-5'>
-            <button  className="bg-orange py-2 px-2 font-bold shadow-black shadow-lg text-white" >Add to cart</button>
+            <button  className="bg-orange py-3 px-2  uppercase w-full transition-all duration-500 ease-in-out hover:shadow-black shadow-lg text-white" >Add to cart</button>
 
             </div>
             <FaRegHeart className={`absolute top-5 right-5 text-3xl ${isLiked ? 'text-orange' : 'text-black'}`} onClick={(index)=>{

@@ -24,11 +24,11 @@ const Header = () => {
       {/* Mobile Navbar */}
       <div className="flex justify-between items-center md:hidden">
         <div className="text-[5vw] font-bold">US-ECOMMERCE</div>
-        <div className="text-[7vw] text-orange relative items-center cursor-pointer font-bold flex gap-5">
-          <button  className="bg-orange py-2 px-2 font-bold shadow-black shadow-lg text-white" onClick={()=>{
+        <div className="text-[7vw] text-orange relative items-center cursor-pointer  flex gap-5">
+          <button  className="bg-orange py-2 px-4 sm:text-lg sm:px-6  text-sm shadow-black shadow-lg text-white" onClick={()=>{
             navigate('/login');
           }}>Login</button>
-          <BsCart3 className="text-[5vw]" />
+          <BsCart3 className="text-[5vw]" onClick={()=>navigate('/cart')}/>
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <IoClose /> : <RiMenu3Line />}
           </button>
@@ -37,8 +37,8 @@ const Header = () => {
 
       <div
         className={`${
-          isOpen ? "h-52" : "h-0"
-        } pt-10 -mb-10 md:hidden flex flex-col gap-5 text-[4vw] transition-all duration-700`}
+          isOpen ? "h-60" : "h-0"
+        } pt-10 -mb-10 md:hidden flex flex-col gap-5 text-[4vw] sm:text-[2.5vw] transition-all duration-700`}
       >
         {navLinks.map((ele, index) => (
           <Link
@@ -58,27 +58,32 @@ const Header = () => {
           <SearchBar />
         </div>
         <div className="flex items-center gap-5">
-        <button  className="bg-orange py-2 px-2 font-bold shadow-black shadow-lg text-white" onClick={()=>{
-            navigate('/login');
-          }}>Login</button>
+       
           <BsCart3 className="text-[4vw] text-orange" onClick={() => navigate('/cart')} />
         </div>
       </div>
 
-      <div className="gap-10 capitalize mt-10 hidden md:flex text-sm xl:text-lg items-center">
+      <div className=" capitalize mt-10  justify-between hidden md:flex text-sm xl:text-md items-center">
+        <div className="flex gap-10 items-center">
         {navLinks.map((ele, index) => (
           <Link
             key={index}
             to={ele.href}
             className={`group-hover:text-orange-500 ${
               location.pathname === ele.href
-                ? 'bg-orange py-2 px-2 font-bold shadow-black shadow-lg text-white'
+                ? 'bg-orange py-2 px-4 font-bold shadow-black shadow-lg text-white'
                 : ''
             }`}
           >
             {ele.name}
           </Link>
         ))}
+        </div>
+       <div>
+         <button  className="bg-orange hover:scale-[1.1] py-2 px-4 hover:px-6 transition-all duration-400 hover:font-bold  shadow-black shadow-lg text-white" onClick={()=>{
+            navigate('/login');
+          }}>Login</button>
+      </div>
       </div>
     </nav>
   );
